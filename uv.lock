@@ -1344,7 +1344,7 @@ wheels = [
 
 [[package]]
 name = "openinference-instrumentation-anthropic"
-version = "1.0.0"
+version = "2.1.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "openinference-instrumentation" },
@@ -1355,9 +1355,9 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "wrapt" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/15/8f/e99ec5a162024f9034aeeeb135b2acd07edd3aa6794f924fa9437bf9fd15/openinference_instrumentation_anthropic-1.0.0.tar.gz", hash = "sha256:e6d7aa4fac5f6851eae2510a1b4b8299ee90dfef1c9364f380c4f7f14d2e454b", size = 15635, upload-time = "2026-03-06T06:00:43.525Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/dd/43/3d0050ee78e40bee62dd507d2faeb1dfa1aab690966262c126598b84721d/openinference_instrumentation_anthropic-2.1.6.tar.gz", hash = "sha256:fc52388d57b5390a55dffcfc5d8e11cf1b4e9e5dbb6bda920d42681661728b8a", size = 18792, upload-time = "2026-09-24T03:52:43.301Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c6/3a/7495fb013a38ecdcd5527d3d4b764ceed170248c248b2356255523ab7b17/openinference_instrumentation_anthropic-1.0.0-py3-none-any.whl", hash = "sha256:ad2209d4006751af3e86fcc8ef1acaf94853ddb46fdd4310638500dedb6f544b", size = 18873, upload-time = "2026-03-06T06:00:41.86Z" },
+    { url = "https://files.pythonhosted.org/packages/e3/ef/5f9c75ebbd554c09de83429f1d75c2bc4d12c6c1ed616fdd7c5e02ea8c34/openinference_instrumentation_anthropic-2.1.6-py3-none-any.whl", hash = "sha256:6c25fa3e939b0853a673f42697122e5d600364e8bf8ed9bccd3e81dfce9b0322", size = 22286, upload-time = "2026-09-24T03:52:41.518Z" },
 ]
 
 [[package]]
@@ -2674,7 +2674,7 @@ requires-dist = [
     { name = "openinference-instrumentation", specifier = ">=0.1.40,<1.0" },
     { name = "openinference-instrumentation-agent-framework", marker = "extra == 'agent-framework'", specifier = ">=0.1.0,<1.0" },
     { name = "openinference-instrumentation-agno", specifier = ">=0.1.29,<1.0" },
-    { name = "openinference-instrumentation-anthropic", specifier = ">=1.0.0,<2.0" },
+    { name = "openinference-instrumentation-anthropic", specifier = ">=2.0.0,<3.0" },
     { name = "openinference-instrumentation-autogen", specifier = ">=0.1.10,<1.0" },
     { name = "openinference-instrumentation-bedrock", specifier = ">=0.1.41,<1.0" },
     { name = "openinference-instrumentation-claude-agent-sdk", specifier = ">=0.1.0,<2.0" },
