@@ -9,6 +9,7 @@ from typesafe_sdk import TypeSafeClient
 from typesafe_sdk._core.errors import TypeSafeBadRequestError
 
 from traceroot import using_attributes
+from traceroot.instrumentation.registry import Integration, initialize_integrations
 
 
 class MockTransport(httpx2.BaseTransport):
@@ -24,7 +25,11 @@ class MockTransport(httpx2.BaseTransport):
 
 @pytest.fixture(autouse=True)
 def setup_instrumentation(memory_exporter):
-    TypeSafeAIInstrumentor().instrument()
+    from opentelemetry import trace
+
+    assert initialize_integrations(trace.get_tracer_provider(), [Integration.TYPESAFE]) == [
+        Integration.TYPESAFE
+    ]
     yield
     TypeSafeAIInstrumentor().uninstrument()
 
@@ -82,6 +87,8 @@ def test_alias_request_records_resolved_model(memory_exporter):
 
 
 def test_contract_kind_model_tokens(memory_exporter):
+    # TraceRoot ingest classifies and prices a span from these attributes. If upstream
+    # moves Jev to another span kind or renames them, this fails instead of costs going silent.
     client = create_client(
         json_body={
             "model": "jev-1.13.0",

@@ -2774,11 +2774,13 @@ typesafe = [
 [package.dev-dependencies]
 dev = [
     { name = "coverage" },
+    { name = "openinference-instrumentation-typesafe" },
     { name = "pytest" },
     { name = "pytest-asyncio" },
     { name = "pytest-cov" },
     { name = "respx" },
     { name = "ruff" },
+    { name = "typesafe-sdk" },
 ]
 
 [package.metadata]
@@ -2816,11 +2818,13 @@ provides-extras = ["dspy", "agent-framework", "typesafe"]
 [package.metadata.requires-dev]
 dev = [
     { name = "coverage", specifier = ">=7.0" },
+    { name = "openinference-instrumentation-typesafe", specifier = ">=0.1.1,<0.2" },
     { name = "pytest", specifier = ">=7.0" },
     { name = "pytest-asyncio", specifier = ">=0.21" },
     { name = "pytest-cov", specifier = ">=4.0" },
     { name = "respx", specifier = ">=0.20" },
     { name = "ruff", specifier = ">=0.15.0" },
+    { name = "typesafe-sdk", specifier = ">=0.6.0,<1.0" },
 ]
 
 [[package]]
